@@ -11,14 +11,22 @@ const NavBar = () => {
           Home
         </Menu.Item>
       </Link>
+
       <Link to="/about">
         <Menu.Item>
           About
         </Menu.Item>
       </Link>
-      <Link to="/etc">
+
+      <Link to="/art">
         <Menu.Item>
-          Etc
+          Art
+        </Menu.Item>
+      </Link>
+
+      <Link to="/movies">
+        <Menu.Item>
+          Favorite Movies
         </Menu.Item>
       </Link>
     </Menu>
