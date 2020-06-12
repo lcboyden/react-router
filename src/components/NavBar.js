@@ -1,36 +1,63 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
 
-  return (
-    <Menu inverted>
-      <Link to="/">
-        <Menu.Item>
+const  NavBar = () => {
+
+    return (
+      <div>
+        <NavLink to='/'>
           Home
-        </Menu.Item>
-      </Link>
-
-      <Link to="/about">
-        <Menu.Item>
+        </NavLink>
+        <NavLink to='/about'>
           About
-        </Menu.Item>
-      </Link>
-
-      <Link to="/art">
-        <Menu.Item>
+        </NavLink>
+        <NavLink to='/art'>
           Art
-        </Menu.Item>
-      </Link>
-
-      <Link to="/movies">
-        <Menu.Item>
-          Favorite Movies
-        </Menu.Item>
-      </Link>
-    </Menu>
-  );
+        </NavLink>
+        <NavLink to='/movies'>
+          Movies
+        </NavLink>
+      </div>
+    )
 }
+
+const styles = {
+  active: {
+    color: 'steelblue',
+  }
+}
+
+
+// const NavBar = () => {
+
+//   return (
+//     <div inverted>
+//       <Link to="/">
+//         <div>
+//           Home
+//         </div>
+//       </Link>
+
+//       <Link to="/about">
+//         <div>
+//           About
+//         </div>
+//       </Link>
+
+//       <Link to="/art">
+//         <div>
+//           Art
+//         </div>
+//       </Link>
+
+//       <Link to="/movies">
+//         <div>
+//           Favorite Movies
+//         </div>
+//       </Link>
+//     </div>
+//   );
+// }
 
 export default NavBar;

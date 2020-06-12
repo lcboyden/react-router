@@ -1,26 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MovieForm from './MovieForm'
-import { Header, Table, Rating, Button, Icon, Segment} from 'semantic-ui-react'
+// import { Header, Table, Rating, Button, Icon, Segment} from 'semantic-ui-react'
 
-const RatingStar = () => (
-  <Rating icon='star' defaultRating={3} maxRating={5} />
-)
+// const RatingStar = () => (
+//   <Rating icon='star' defaultRating={3} maxRating={5} />
+// )
 
-class Movie extends React.Component {
-  state = { editing: false}
+export default function Movie() {
+  const [editing, setEditing] = useState(false)
+  // state = { editing: false}
 
-  toggleEdit = () => this.setState({ editing: !this.state.editing})
+ const toggleEdit = () => setEditing(!this.state.editing)
 
-  render () {
-    return (
+  
+    // return (
       
       // <Segment>
 
       // </Segment>
       
-      <>
-      {/* <MovieForm/> */}
-
+      // <>
+      /* <MovieForm/> */
+/* 
         <Table celled padded>
           <Table.Header>
             <Table.Row style={{width: "50px"}}>
@@ -40,8 +41,8 @@ class Movie extends React.Component {
               </Table.Cell>
               <Table.Cell >
                 <Rating icon='star' defaultRating={3} maxRating={5} />
-                {/* <p>{this.props.RatingStar}</p> */}
-              </Table.Cell>
+                {/* <p>{this.props.RatingStar}</p> */
+              /* </Table.Cell>
               <Table.Cell>
                 <p>{this.props.comments}</p>
               </Table.Cell>
@@ -54,9 +55,9 @@ class Movie extends React.Component {
                 </Button>
               </Table.Cell>
             </Table.Row>
-          </Table.Body>
-        </Table>
-        {/* <div>
+          </Table.Body> */
+        /* </Table> */
+        /* <div>
           <Button icon color="blue" onClick={this.toggleEdit}>
             <Icon name="pencil" />
           </Button>
@@ -66,10 +67,7 @@ class Movie extends React.Component {
           <Button icon color="green">
             <Icon name="eye" />
           </Button>
-        </div> */}
-      </>
-    )
-  }
+        </div> */
+//       </>
+//     )
 }
-
-export default Movie
